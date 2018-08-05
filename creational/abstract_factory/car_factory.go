@@ -1,24 +1,24 @@
 package abstract_factory
 
 import (
-	"github.com/go-errors/errors"
+	"errors"
 	"fmt"
 )
 
 const (
-	LuxuaryCarType = 1
-	FamilyCarType = 2
+	LuxuryCarType   = 1
+	FamiliarCarType = 2
 )
 
-type CarFactory struct {}
+type CarFactory struct{}
 
 func (c *CarFactory) GetVehicle(v int) (Vehicle, error) {
 	switch v {
-	case LuxuaryCarType:
+	case LuxuryCarType:
 		return new(LuxuryCar), nil
-	case FamilyCarType:
+	case FamiliarCarType:
 		return new(FamiliarCar), nil
 	default:
-		return nil, errors.New(fmt.Sprintf("Vehicle of type %d not recognized\n"))
+		return nil, errors.New(fmt.Sprintf("Vehicle of type %d not recognized\n", v))
 	}
 }
