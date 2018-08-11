@@ -20,6 +20,7 @@ func TestAnimal_Swim(t *testing.T) {
 	fish := Shark {
 		Swim: Swim,
 	}
+
 	fish.Eat()
 	fish.Swim()
 }

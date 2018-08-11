@@ -27,7 +27,6 @@ func (f *ManufacturingDirector) SetBuilder(b BuildProcess) {
 	f.builder = b
 }
 
-
 //a Builder of type car
 type CarBuilder struct {
 	v VehicleProduct
